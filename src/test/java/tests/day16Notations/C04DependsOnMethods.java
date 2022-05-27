@@ -1,4 +1,4 @@
-package day16Notations;
+package tests.day16Notations;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -10,7 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import utilities.TestBase;
+
 
 import java.time.Duration;
 
@@ -45,5 +45,10 @@ public class C04DependsOnMethods  {
         //Sonuc yazisinin nutella icerdigini test edelim
         WebElement sonucYazisi = driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
         Assert.assertTrue(sonucYazisi.getText().contains("Nutella"));
+    }
+
+    @Test
+    public void test04() {
+        System.out.println("Bak bu calisti");
     }
 }

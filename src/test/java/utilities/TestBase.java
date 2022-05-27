@@ -19,7 +19,7 @@ public abstract class TestBase {
     protected static String tarih;
 
     @BeforeMethod
-    public static void setUp() {
+    public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -30,7 +30,7 @@ public abstract class TestBase {
         tarih = date.format(formatter);
     }
     @AfterMethod
-    public static void tearDown() throws InterruptedException {
+    public void tearDown() throws InterruptedException {
         Thread.sleep(2000);
         driver.quit();
     }
