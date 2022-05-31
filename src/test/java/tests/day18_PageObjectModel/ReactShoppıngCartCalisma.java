@@ -1,5 +1,6 @@
 package tests.day18_PageObjectModel;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -26,46 +27,38 @@ public class ReactShoppıngCartCalisma {
             System.out.println((i + 1) + ".urun : " + (rSCP.allProducts.get(i).getText()));
         }
         // 3.Stringlerden olusan bir ArrayList oluşturun ve Ürün Adlarını ArrayList'e yerleştirin
-        ArrayList<String> urunAdlari = new ArrayList<>();
-        for (int i = 0; i < 16; i++) {
-            urunAdlari.add(rSCP.allProducts.get(i).getText());
-
+        ArrayList<String> urunler = new ArrayList<>();
+        for (WebElement w : rSCP.allProducts) {
+            urunler.add(w.getText());
         }
+        System.out.println(urunler);
         // 4.Siteden Rastgele 5 öğe seçin, sepete ekleyin ve sectiginiz öğelerin adlarını yazdırın
         // (Her ürün 1 defadan fazla eklenemez!)
-        List<Integer> randomSecilen = new ArrayList<>();
-        Random rnd = new Random();
-        List<Integer> randomIndexList = new ArrayList<>();
-
-        int randomSelect = 5;
-
-        while (randomIndexList.size() < randomSelect) {
-            int randomIndex = rnd.nextInt(rSCP.addToCartList.size());
-            if (!randomIndexList.contains(randomIndex)) {
-                randomIndexList.add(randomIndex);
-            }
+        for (int i = 0; i < rSCP.allProducts.size(); i++) {
+            rSCP.addToCartList.get(i).click();
+            Thread.sleep(1000);
+            rSCP.x.click();
         }
-
-        List<String> priceList = new ArrayList<>();
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-
-        double expectedTotalPrice = 0;
-        for (int i = 0; i < randomSelect; i++) {
-            js.executeScript("arguments[0].click();", rSCP.addToCartList.get(randomIndexList.get(i)));
-
-            System.out.println(urunAdlari.get(randomIndexList.get(i)));
-            priceList.add(rSCP.priceElement.get(randomIndexList.get(i)).getText().replace("$", ""));
-            expectedTotalPrice += Double.parseDouble(priceList.get(i));
-        }
-
-
-
-
-        // 7.Checkout'a tıklayın
-        rSCP.checkOutButtonElement.click();
         // 5.Her bir öğenin fiyatını toplayın ve sonucunuzu web sitesiyle karşılaştırın
-        // 6.Sonuçlar eşleşiyorsa  konsola test pass yazirin
-        // 7.Checkout'a tıklayın
+        List<WebElement> fiyatlar = Driver.getDriver().findElements(By.xpath("//div[@class='sc-124al1g-6 ljgnQL']"));
+        double toplam = 0;
+        System.out.println("*************************************");
+        for (int i = 0; i < fiyatlar.size(); i++) {
+            System.out.println(fiyatlar.get(i).getText());
+
+        }
+
+
     }
 }
+
+
+
+// 7.Checkout'a tıklayın
+//rSCP.checkOutButtonElement.click();
+// 5.Her bir öğenin fiyatını toplayın ve sonucunuzu web sitesiyle karşılaştırın
+// 6.Sonuçlar eşleşiyorsa  konsola test pass yazirin
+// 7.Checkout'a tıklayın
+
+
 

@@ -18,8 +18,8 @@ public class ReactShoppıngCartPage {
     public List<WebElement> addToCartList;
     @FindBy(xpath = "//span[normalize-space()='X']")
     public WebElement x;
-    @FindBy(xpath = "//div[@class='sc-124al1g-5 fTQxRg']/p[1]")
-    public List<WebElement> priceElement;
+    @FindBy(xpath = "//div[@class='sc-11uohgb-4 bnZqjD']//p")
+    public List<WebElement> urunFiyatlari;
     @FindBy(xpath = "//div[@class='sc-1h98xa9-8 bciIxg']/p[1]")
     public WebElement subtotalPriceElement;
     @FindBy(xpath = "//button[@class='sc-1h98xa9-11 gnXVNU']")
