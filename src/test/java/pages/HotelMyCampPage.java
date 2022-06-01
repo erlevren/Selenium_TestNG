@@ -19,4 +19,23 @@ public class HotelMyCampPage {
     public WebElement login;
     @FindBy (xpath = "//span[@class='username username-hide-on-mobile']")
     public WebElement basariliGiris;
+    @FindBy (xpath = "//span[normalize-space()='Hotel Management']")
+    public WebElement hotelManagement;
+    @FindBy (xpath = "//a[normalize-space()='Hotel List']")
+    public WebElement hotelList;
+    @FindBy (xpath = "//span[@class='hidden-480']")
+    public WebElement addHotel;
+    @FindBy (xpath = "//input[@id='Code']")
+    public WebElement code;
+    @FindBy (xpath = "//select[@id='IDGroup']")
+    public WebElement dropdown;
+    @FindBy (xpath = "//*[@id='btnSubmit']")
+    public WebElement save;
+    @FindBy (xpath = "//*[@class='bootbox-body']")
+    public WebElement visible;
+    @FindBy (xpath = "//*[@class='btn btn-primary']")
+    public WebElement okButton;
+    @FindBy (xpath = "//select[@id='IDGroup']")
+    public WebElement id;
+
 }

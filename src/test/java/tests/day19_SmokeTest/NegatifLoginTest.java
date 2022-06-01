@@ -7,12 +7,13 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class NegatifLoginTest {
+    BrcPage brcPage = new BrcPage();
     @Test
     public void yanlisSifre() throws InterruptedException {
         //       https://www.bluerentalcars.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));
         //      login butonuna bas
-        BrcPage brcPage = new BrcPage();
+        brcPage = new BrcPage();
         brcPage.login.click();
         //test data user email: customer@bluerentalcars.com ,
         Thread.sleep(1000);
@@ -34,7 +35,7 @@ public class NegatifLoginTest {
         //       https://www.bluerentalcars.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));
         //      login butonuna bas
-        BrcPage brcPage = new BrcPage();
+        brcPage = new BrcPage();
         brcPage.login.click();
         //test data user email: boss@bluerentalcars.com ,
         Thread.sleep(1000);
@@ -55,7 +56,7 @@ public class NegatifLoginTest {
         //       https://www.bluerentalcars.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));
         //      login butonuna bas
-        BrcPage brcPage = new BrcPage();
+        brcPage = new BrcPage();
         brcPage.login.click();
         //test data user email: boss@bluerentalcars.com ,
         Thread.sleep(1000);
