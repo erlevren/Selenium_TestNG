@@ -15,6 +15,9 @@ public class Driver {
         POM'da driver icin TestBase class'ina extends etmek yerine Driver class'indan statik methodlar kullanarak
     driver olusturup, ilgili ayarlarin yapilmasi ve en sonda driver'in kapatilmasi tercih edilmistir
      */
+    private Driver(){
+
+    }
     static WebDriver driver;
 
     public static WebDriver getDriver(){

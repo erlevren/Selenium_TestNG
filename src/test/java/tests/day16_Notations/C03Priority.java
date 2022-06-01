@@ -1,4 +1,4 @@
-package tests.day16Notations;
+package tests.day16_Notations;
 
 import org.testng.annotations.Test;
 import utilities.TestBase;
@@ -23,7 +23,7 @@ public class C03Priority extends TestBase {
         System.out.println(driver.getCurrentUrl());
     }
 
-    @Test
+    @Test(groups = "grup1")
     public void techproTesti() {
         driver.get("https://www.techproeducation.com");
         System.out.println(driver.getCurrentUrl());

@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class Calisma {
-    @Test
+    @Test(groups = "grup1")
     public void testName() throws IOException {
         n11Page n11Page = new n11Page();
         //1. https://www.n11.com/ adresine gidilerek headerdan “Mağazalar/Mağazaları Gör” seçilir.

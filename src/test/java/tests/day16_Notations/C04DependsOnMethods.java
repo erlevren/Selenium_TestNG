@@ -1,4 +1,4 @@
-package tests.day16Notations;
+package tests.day16_Notations;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -47,7 +47,7 @@ public class C04DependsOnMethods  {
         Assert.assertTrue(sonucYazisi.getText().contains("Nutella"));
     }
 
-    @Test
+    @Test(groups = {"grup1", "grup2"})
     public void test04() {
         System.out.println("Bak bu calisti");
     }

@@ -1,4 +1,4 @@
-package tests.day16Notations;
+package tests.day16_Notations;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -10,7 +10,7 @@ import org.testng.asserts.SoftAssert;
 import utilities.TestBase;
 
 public class C06SoftAssert extends TestBase {
-    @Test
+    @Test(groups = "grup2")
     public void test01() {
         /*
           Softassertion baslangic ve bitis satirlari arasindaki tum assertion'lari yapip
