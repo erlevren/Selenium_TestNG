@@ -49,7 +49,7 @@ public class End2End {
         Assert.assertTrue(hotel.visible.isDisplayed());
         //10.	OK butonuna tıklayın.
         hotel.okButton.click();
-        Driver.closeDriver();
+        //Driver.closeDriver();
 
     }
 }
