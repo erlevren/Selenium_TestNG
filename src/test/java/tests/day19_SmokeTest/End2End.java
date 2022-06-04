@@ -1,6 +1,7 @@
 package tests.day19_SmokeTest;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -8,10 +9,15 @@ import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class End2End {
+import java.io.IOException;
+
+public class End2End extends TestBaseRapor {
     @Test
-    public void test01() throws InterruptedException {
+    public void test01() throws InterruptedException, IOException {
+        extentTest=extentReports.createTest("End2EndTest","End to End testi yapildi");
         //1.	Tests packagenin altına class olusturun: CreateHotel
         //2.	Bir metod olusturun: createHotel
         //3.	https://www.hotelmycamp.com adresine git.
@@ -42,6 +48,7 @@ public class End2End {
         Thread.sleep(1000);
         Select select = new Select(hotel.dropdown);
         select.selectByIndex(1);
+        Thread.sleep(1000);
         //8.	Save butonuna tıklayın.
         hotel.save.click();
         Thread.sleep(1000);
@@ -49,7 +56,18 @@ public class End2End {
         Assert.assertTrue(hotel.visible.isDisplayed());
         //10.	OK butonuna tıklayın.
         hotel.okButton.click();
-        //Driver.closeDriver();
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.PAGE_UP).perform();
+        Thread.sleep(3000);
+        //11.	Hotel rooms linkine tıklayın.
+        hotel.hotelRooms.click();
+        extentTest.pass("hotel rooms tiklandi");
+        //12.	"LIST OF HOTELROOMS" textinin göründüğünü doğrulayın..
+        WebElement listOfHotelRoomsWE=hotel.listOfHotelRooms;
+        Assert.assertTrue(listOfHotelRoomsWE.isDisplayed());
+
+        ReusableMethods.getScreenshotWebElement("sonuc",listOfHotelRoomsWE);
+        Driver.closeDriver();
 
     }
 }

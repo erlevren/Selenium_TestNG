@@ -5,12 +5,15 @@ import org.testng.annotations.Test;
 import pages.BrcPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
+
+import java.io.IOException;
 
 public class C03_PositifLoginTestiRaporlu extends TestBaseRapor {
     BrcPage brcPage;
     @Test
-    public void pozitifLoginTestRaporlu() throws InterruptedException {
+    public void pozitifLoginTestRaporlu() throws InterruptedException, IOException {
         extentTest=extentReports.createTest("Pozitif Login","Gecerli username ve sifre ile giris yapabilmeli");
 
         //       https://www.bluerentalcars.com/ adresine git
@@ -37,6 +40,7 @@ public class C03_PositifLoginTestiRaporlu extends TestBaseRapor {
         String expectedUsername = ConfigReader.getProperty("brcValidUsername");
         Assert.assertEquals(expectedUsername,actualUsername);
         extentTest.pass("Kullanici basarili sekilde giris yapti");
+        ReusableMethods.getScreenshot("sayfaResmi");
         Driver.closeDriver();
         extentTest.pass("Driver kapatildi, test sonlandirildi");
 

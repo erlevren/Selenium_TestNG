@@ -37,5 +37,10 @@ public class HotelMyCampPage {
     public WebElement okButton;
     @FindBy (xpath = "//select[@id='IDGroup']")
     public WebElement id;
+    @FindBy (xpath = "//a[normalize-space()='Hotel Rooms']")
+    public WebElement hotelRooms;
+    @FindBy (xpath = "//*[@class='caption-subject font-green-sharp bold uppercase']")
+    public WebElement listOfHotelRooms;
+
 
 }
