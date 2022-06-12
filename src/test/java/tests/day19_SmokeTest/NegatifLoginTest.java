@@ -8,7 +8,7 @@ import utilities.Driver;
 
 public class NegatifLoginTest {
     BrcPage brcPage = new BrcPage();
-    @Test
+    @Test()
     public void yanlisSifre() throws InterruptedException {
         //       https://www.bluerentalcars.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));

@@ -2,9 +2,9 @@
 <suite name="day19_SmokeTest">
     <test name="day19_SmokeTest">
         <classes>
-            <class name="tests.day19_SmokeTest.PozitifLoginTest"></class>
-            <class name="tests.day19_SmokeTest.NegatifLoginTest"></class>
-            <class name="tests.day19_SmokeTest.End2End"></class>
+            <class name="tests.day19_SmokeTest.PozitifLoginTest"/>
+            <class name="tests.day19_SmokeTest.NegatifLoginTest"/>
+            <class name="tests.day19_SmokeTest.End2End"/>
         </classes>
     </test>
 </suite>

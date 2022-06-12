@@ -42,7 +42,7 @@ public class C03_DataProvider {
         AmazonPage amazon = new AmazonPage();
         //amazona gidelim
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
-        //nutella, java, cigdem ve netherlands icin arama yapalim
+        //nutella, java, samsung ve Turkey icin arama yapalim
         amazon.aramaKutusu.sendKeys(arananKelime + Keys.ENTER);
         // sonuclarin aradigimiz kelime icerdigini test edelim
         String expectedKelime = arananKelime;

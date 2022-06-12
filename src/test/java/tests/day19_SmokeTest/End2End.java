@@ -15,7 +15,7 @@ import utilities.TestBaseRapor;
 import java.io.IOException;
 
 public class End2End extends TestBaseRapor {
-    @Test
+    @Test()
     public void test01() throws InterruptedException, IOException {
         extentTest=extentReports.createTest("End2EndTest","End to End testi yapildi");
         //1.	Tests packagenin altına class olusturun: CreateHotel

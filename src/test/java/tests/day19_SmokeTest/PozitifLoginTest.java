@@ -7,7 +7,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class PozitifLoginTest {
-    @Test
+    @Test()
     public void positiveLoginTest() throws InterruptedException {
         //Driver driver = new Driver();
         //driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
