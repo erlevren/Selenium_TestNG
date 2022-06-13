@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="com.TestNg_Selenium" />
+        <module name="batch59Selenium" />
+        <module name="Selenium_TestNG" />
       </profile>
     </annotationProcessing>
   </component>

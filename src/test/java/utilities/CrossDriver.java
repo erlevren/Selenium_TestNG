@@ -43,19 +43,14 @@ public class CrossDriver {
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
             }
-
         }
         return driver;
     }
-
     public static void closeDriver() {
         if (driver != null) { // driver'a deger atanmissa
             driver.quit();
             driver = null;
         }
-
-
     }
-
 }
 
