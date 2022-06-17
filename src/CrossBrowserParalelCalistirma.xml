@@ -3,13 +3,13 @@
     <test name="Cross browser chrome">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="tests.day22_CrossBrowser.C02_SoftAssertCross"></class>
+            <class name="tests.CrossBrowser.C02_SoftAssertCross"></class>
         </classes>
     </test>
     <test name="Cross browser edge">
         <parameter name="browser" value="edge"></parameter>
         <classes>
-            <class name="tests.day22_CrossBrowser.C01_AssertionsCross"></class>
+            <class name="tests.CrossBrowser.C01_AssertionsCross"></class>
         </classes>
     </test>
 </suite>

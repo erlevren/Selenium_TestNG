@@ -2,13 +2,13 @@
 <suite name="belirliPackegeCalistirma">
     <test name="package">
         <packages>
-            <package name="tests.day17_pom"></package>
-            <package name="tests.day19_SmokeTest"></package>
+            <package name="tests.pom"></package>
+            <package name="tests.SmokeTest"></package>
         </packages>
     </test>
     <test name="ayarlarin test class'i calistirma">
         <classes>
-            <class name="tests.day19_SmokeTest.PozitifLoginTest"></class>
+            <class name="tests.SmokeTest.PozitifLoginTest"></class>
         </classes>
     </test>
     

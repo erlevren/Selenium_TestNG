@@ -2,7 +2,7 @@
 <suite name="tum testleri calistirma" verbose="3" parallel="classes" thread-count="2">
     <test name="regression">
         <packages>
-            <package name="tests.day21_reusableMethods_HtmlReports">
+            <package name="tests.reusableMethods_HtmlReports">
 
             </package>
         </packages>

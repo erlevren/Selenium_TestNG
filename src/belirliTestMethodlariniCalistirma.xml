@@ -13,12 +13,12 @@ olusmamasi lazim celiski durumunda selenium testleri calistirmaz.
                                                                 daha cok veya daha az olmasini belirler -->
     <test name="method">
         <classes>
-            <class name="tests.day16_Notations.C03Priority">
+            <class name="tests.Notations.C03Priority">
                 <methods>
                     <include name="test02"></include>
                 </methods>
             </class>
-            <class name="tests.day16_Notations.C04DependsOnMethods">
+            <class name="tests.Notations.C04DependsOnMethods">
                 <methods>
                     <exclude name="test03"></exclude>
                 </methods>

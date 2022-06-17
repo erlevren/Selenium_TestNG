@@ -17,8 +17,8 @@
             </run>
         </groups>
         <packages>
-            <package name="tests.day16_Notations"></package>
-            <package name="tests.day17_pom"></package>
+            <package name="tests.Notations"></package>
+            <package name="tests.pom"></package>
         </packages>
     </test>
 </suite>

@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="day19_SmokeTest">
+    <test name="day19_SmokeTest">
+        <classes>
+            <class name="tests.SmokeTest.PozitifLoginTest"/>
+            <class name="tests.SmokeTest.NegatifLoginTest"/>
+            <class name="tests.SmokeTest.End2End"/>
+        </classes>
+    </test>
+</suite>
